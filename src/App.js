@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import fakeFetch from './utils/fakeFetch'
-
+import Filter from './components/Filter'
 import Header from './components/Header';
 import Person from './components/Person';
 
 function App() {
 
   const [ people, setPeople ] = useState([])
+  const [devLevelFilter, setDevLevelFilter] = useState("")
 
   useEffect(()=> {
     const getPeople = async () => {
